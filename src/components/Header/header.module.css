@@ -1,0 +1,19 @@
+.Header {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 0;
+}
+
+.Items {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.Icons {
+  margin-left: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,4 @@
+.PostLoop {
+  display: flex;
+  flex-direction: column;
+}

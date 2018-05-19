@@ -1,0 +1,23 @@
+query GetPosts {
+  allMarkdownRemark(
+    filter: { frontmatter: { type: { eq: "post" } } }
+    sort: { fields: [frontmatter___date], order: DESC }
+    limit: 2
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        timeToRead
+        wordCount {
+          words
+        }
+        frontmatter {
+          date(fromNow: true)
+          title
+        }
+      }
+    }
+  }
+}

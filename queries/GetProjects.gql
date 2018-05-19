@@ -1,0 +1,17 @@
+query GetProjects {
+  allMarkdownRemark(
+    filter: { frontmatter: { type: { eq: "project" } } }
+    limit: 2
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}

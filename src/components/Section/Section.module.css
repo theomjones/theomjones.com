@@ -1,0 +1,17 @@
+.Header {
+  display: flex;
+  align-content: center;
+}
+
+.Header:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.Arrow {
+  color: #6078e4;
+  transition: all 120ms ease-out;
+  margin: auto;
+  margin-left: 15px;
+  display: inline-block;
+}

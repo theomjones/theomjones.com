@@ -1,0 +1,47 @@
+.Title {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.h1 {
+  font-weight: 700;
+  font-size: 100%;
+}
+
+.h2 {
+  font-weight: 600;
+  font-size: 90%;
+}
+.h3 {
+  font-weight: 500;
+  font-size: 80%;
+}
+.h4 {
+  font-weight: 400;
+  font-size: 70%;
+}
+.h5 {
+  font-weight: 300;
+  font-size: 60%;
+}
+.h6 {
+  font-size: 50%;
+}
+
+.isBold {
+  font-weight: 700;
+}
+
+.isLight {
+  font-weight: 200;
+}
