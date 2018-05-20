@@ -11,6 +11,13 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   let slug
   let type
+
+  if (node.internal.mediaType) {
+    if (node.internal.mediaType.match('image')) {
+      slug = createFilePath({ node, getNode, basePath: 'images/pages' })
+      type = 'image'
+    }
+  }
   if (node.internal.type === 'MarkdownRemark') {
     if (node.frontmatter.type == 'project') {
       slug = createFilePath({ node, getNode, basePath: 'projects/pages' })
@@ -38,6 +45,17 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               fields {
                 slug
+              }
+            }
+          }
+        }
+        images: allFile(
+          filter: { internal: { mediaType: { regex: "/image/" } } }
+        ) {
+          edges {
+            node {
+              internal {
+                mediaType
               }
             }
           }

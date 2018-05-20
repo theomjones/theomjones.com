@@ -4,6 +4,13 @@ module.exports = {
     author: 'Theo Messenger-Jones',
   },
   plugins: [
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: ['gatsby-remark-copy-linked-files'],
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
@@ -21,7 +28,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
