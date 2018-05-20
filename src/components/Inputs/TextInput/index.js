@@ -32,6 +32,7 @@ class TextInput extends React.Component {
             color: this.props.color,
             borderColor: this.props.border,
           }}
+          name={this.props.name}
           onChange={this.props.onChange}
           className={classNames.TextInput}
           onFocus={this.onFocus}
@@ -50,6 +51,7 @@ TextInput.propTypes = {
   border: PropTypes.string,
   autoFocus: PropTypes.bool,
   placeholder: PropTypes.string,
+  name: PropTypes.string,
 }
 
 export default TextInput

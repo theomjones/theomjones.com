@@ -27,7 +27,14 @@ class EmailForm extends React.Component {
   onSubmit(event) {
     event.preventDefault()
     this.setState(() => ({ loading: true }))
-    alert('Uncomment API.sendEmail')
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: JSON.stringify({
+        'form-name': 'Emails',
+        email: this.state.inputValue,
+      }),
+    })
     // API.sendEmail(this.state.inputValue)
     //   .then(res => {
     //     console.log(res)
@@ -51,8 +58,14 @@ class EmailForm extends React.Component {
             touch.
           </Text>
         </div>
-        <form className={classNames.Form} onSubmit={this.onSubmit}>
+        <form
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          className={classNames.Form}
+          onSubmit={this.onSubmit}
+        >
           <TextInput
+            name="Emails"
             placeholder="you@mail.co"
             color={this.props.textInputColor || '#fff'}
             border={this.props.textInputBorder || 'rgba(255, 255, 255, .8)'}
