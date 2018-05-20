@@ -33,6 +33,7 @@ export default class Section extends Component {
             h3
             size={this.props.size}
             weight={600}
+            tertiary={this.props.subSection ? true : false}
           />
           {this.props.canCollapse && (
             <span
@@ -63,5 +64,7 @@ Section.defaultProps = {
 Section.propTypes = {
   title: PropTypes.string.isRequired,
   collapsed: PropTypes.bool,
+  size: PropTypes.string,
+  subSection: PropTypes.bool,
   children: PropTypes.any.isRequired,
 }

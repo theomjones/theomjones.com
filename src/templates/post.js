@@ -3,8 +3,10 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import Hero from '../components/Hero/'
 import { Container } from '../components/Layout/'
+import { Text } from '../components/Typography'
 
 import classNames from './PostTemplate.module.css'
+import Pill from '../components/Pill/index'
 
 export default ({ data }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -30,7 +32,13 @@ export default ({ data }) => {
         subtitle={post.frontmatter.subtitle ? post.frontmatter.subtitle : null}
         image={post.frontmatter.feature}
         hasHeader
-      />
+      >
+        <div className={classNames.Info}>
+          <Pill title={`${post.frontmatter.date}`} />
+          <Pill title={`${post.timeToRead} minute read`} />
+          <Pill title={`${post.wordCount.words} words`} />
+        </div>
+      </Hero>
       <Container>
         <div
           className={classNames.PostTemplate}

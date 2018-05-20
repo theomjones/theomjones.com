@@ -9,9 +9,9 @@ const transport = nodemailer.createTransport({
 })
 
 exports.handler = (event, context, callback) => {
+  console.log(event)
   const data = JSON.parse(JSON.stringify(event)).body
   let body = JSON.parse(data)
-
   transport
     .sendMail({
       to: 'theomjones@gmail.com',
@@ -21,6 +21,7 @@ exports.handler = (event, context, callback) => {
       replyTo: body.email,
     })
     .then(res => {
+      console.log(res)
       callback(null, {
         statusCode: 200,
         body: body.email,

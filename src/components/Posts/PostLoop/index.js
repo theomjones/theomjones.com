@@ -4,19 +4,27 @@ import Link from 'gatsby-link'
 import PostItem from '../PostItem/'
 import classNames from './PostLoop.module.css'
 import TextInput from '../../Inputs/TextInput'
+import Button from '../../Button'
 
 export default class extends React.Component {
   constructor(props) {
+    console.log('PROPS', props)
     super(props)
     this.state = {
       searchString: '',
+      posts: props.data.posts.edges,
     }
     this.handleSearch = this.handleSearch.bind(this)
+    this.reversePosts = this.reversePosts.bind(this)
   }
 
   handleSearch(event) {
     const val = event.target.value
     this.setState(() => ({ searchString: val }))
+  }
+
+  reversePosts() {
+    this.setState(prevState => ({ posts: prevState.posts.reverse() }))
   }
 
   render() {
@@ -31,9 +39,12 @@ export default class extends React.Component {
               placeholder="Search..."
               onChange={this.handleSearch}
             />
+            <div className={classNames.Filters}>
+              <Button title="Sort" onClick={this.reversePosts} />
+            </div>
           </div>
         )}
-        {data.posts.edges.map(post => {
+        {this.state.posts.map(post => {
           return (
             post.node.frontmatter.title
               .toUpperCase()

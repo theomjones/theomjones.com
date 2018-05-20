@@ -16,9 +16,11 @@ const Title = ({
   size,
   primary,
   secondary,
+  tertiary,
 }) => {
   const classes = `${classNames.Title} ${primary &&
-    classNames.primary} ${secondary && classNames.secondary}`
+    classNames.primary} ${secondary && classNames.secondary} ${tertiary &&
+    classNames.tertiary}`
   return (
     <div className={classes} style={{ margin: flat && 'none' }}>
       {h1 && (

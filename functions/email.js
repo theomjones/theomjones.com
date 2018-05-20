@@ -7254,9 +7254,9 @@ const transport = nodemailer.createTransport({
 });
 
 exports.handler = (event, context, callback) => {
+  console.log(event);
   const data = JSON.parse(JSON.stringify(event)).body;
   let body = JSON.parse(data);
-
   transport.sendMail({
     to: 'theomjones@gmail.com',
     from: body.email,
@@ -7264,11 +7264,13 @@ exports.handler = (event, context, callback) => {
     html: `<p>You got a sumbission from ${body.email}</p>`,
     replyTo: body.email
   }).then(res => {
+    console.log(res);
     callback(null, {
       statusCode: 200,
       body: body.email
     });
   }).catch(e => {
+    console.log(e);
     callback(null, {
       statusCode: 500,
       body: 'Something went terribly wrong...'

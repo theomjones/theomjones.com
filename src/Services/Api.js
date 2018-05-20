@@ -1,10 +1,12 @@
 import parseGithubData from '../Utils/ParseGithub'
 
+let mailUrl = 'http://localhost:9000/email' // 'https://theomjones.netlify.com/.netlify/functions/email'
+
 export default {
   sendEmail(email) {
     return new Promise((resolve, reject) => {
       window
-        .fetch('https://theomjones.netlify.com/.netlify/functions/email', {
+        .fetch(mailUrl, {
           method: 'POST',
           headers: {
             'content-type': 'application/json',

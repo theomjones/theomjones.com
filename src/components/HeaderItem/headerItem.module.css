@@ -1,6 +1,6 @@
 .HeaderItem {
+  position: relative;
   margin: 0 10px;
-  color: white;
   font-weight: 200;
   font-size: 0.9rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
@@ -20,4 +20,18 @@
 .HeaderItem a:hover {
   opacity: 0.9;
   text-decoration: underline;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  position: absolute;
+  left: 1px;
+  width: 100%;
+  content: '';
+  background: red;
+  height: 2px;
+  bottom: -4px;
 }

@@ -10,6 +10,7 @@ import { Text } from '../components/Typography'
 import Section from '../components/Section'
 import Project from '../components/Project'
 import Github from '../components/Misc/Github'
+import Skills from '../components/Misc/Skills'
 
 const IndexPage = ({ data }) => (
   <div>
@@ -41,7 +42,7 @@ const IndexPage = ({ data }) => (
       <Grid>
         <Col>
           <Section title="Skills">
-            <p>Skills</p>
+            <Skills />
           </Section>
         </Col>
         <Col>
@@ -87,6 +88,7 @@ export const query = graphql`
     }
     projects: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "project" } } }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {

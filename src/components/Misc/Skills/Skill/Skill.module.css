@@ -1,0 +1,10 @@
+.Skill {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px 10px 0;
+  flex-basis: 150px;
+}
+
+.Skill img {
+  margin-right: 3px;
+}

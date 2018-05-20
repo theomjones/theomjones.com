@@ -2,6 +2,20 @@
   padding: 2rem 0;
 }
 
+.Info {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  bottom: -18px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 390px) {
+  .Info {
+    position: relative;
+  }
+}
+
 .PostTemplate p:first-child:not(blockquote) {
   margin-top: 50px;
 }

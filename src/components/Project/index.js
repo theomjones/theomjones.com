@@ -8,7 +8,7 @@ import { Text, Title } from '../Typography/'
 const Project = ({ title, description, skills, url }) => (
   <div className={classNames.Project}>
     <div className={classNames.Head}>
-      <Title h5 flat title={title} weight={700} size="34%" primary />
+      <Title h5 flat title={title} weight={600} size="34%" primary />
       <div className={classNames.Skills}>
         {skills.map(skill => <Tag key={skill} title={skill} />)}
       </div>

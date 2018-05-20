@@ -9,7 +9,9 @@
     "@types/prop-types": "^15.5.2",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-remark-copy-linked-files": "^1.5.32",
     "gatsby-remark-prismjs": "^2.0.2",
     "gatsby-source-filesystem": "^1.5.36",
     "gatsby-transformer-json": "^1.0.18",
@@ -21,15 +23,16 @@
     "react-flexbox-grid": "^2.1.0",
     "react-helmet": "^5.2.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "funcs":
-      "USER=theomjones@gmail.com PASS=tjzqnvjpyejrqyfq netlify-lambda serve ./funcs"
+    "funcs": "USER=theomjones@gmail.com PASS=tjzqnvjpyejrqyfq netlify-lambda serve ./funcs"
   },
   "devDependencies": {
     "prettier": "^1.12.0"

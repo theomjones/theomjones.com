@@ -29,13 +29,10 @@ class EmailForm extends React.Component {
     this.setState(() => ({ loading: true }))
     API.sendEmail(this.state.inputValue)
       .then(res => {
-        console.log(res)
-        this.setState(() => ({ loading: false, inputValue: '' }))
-        alert('Sent!')
+        this.setState(() => ({ loading: false, inputValue: '', hasSent: true }))
       })
       .catch(e => {
         alert(e)
-        console.log(e)
       })
   }
 
@@ -62,6 +59,8 @@ class EmailForm extends React.Component {
             onChange={this.onInputChange}
           />
           <Button title="Go" secondary onClick={this.onSubmit} />
+          {this.state.loading && <Text>Please wait...</Text>}
+          {this.state.hasSent && <Text>Thanks! I'll be in touch.</Text>}
         </form>
       </div>
     )

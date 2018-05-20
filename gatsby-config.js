@@ -28,6 +28,24 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/img/favicon/favicon.png',
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
@@ -39,6 +57,12 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/blog/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: ['gatsby-remark-copy-linked-files'],
       },
     },
   ],
