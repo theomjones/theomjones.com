@@ -27,6 +27,7 @@ exports.handler = (event, context, callback) => {
       })
     })
     .catch(e => {
+      console.log(e)
       callback(null, {
         statusCode: 500,
         body: 'Something went terribly wrong...',
