@@ -1,5 +1,7 @@
 .Icon {
-  display: flex;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 7px;
   height: 25px;
   width: 25px;

@@ -1,0 +1,6 @@
+.Pill {
+  border-radius: 30%;
+  background: white;
+  color: rgb(117, 14, 177);
+  padding: 2px 8px;
+}

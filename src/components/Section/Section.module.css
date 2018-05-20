@@ -3,7 +3,7 @@
   align-content: center;
 }
 
-.Header:hover {
+.canCollapse:hover {
   opacity: 0.8;
   cursor: pointer;
 }

@@ -4,6 +4,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.Text a {
+  text-decoration: underline;
+}
+
 .Para {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,

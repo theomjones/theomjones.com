@@ -1,0 +1,27 @@
+.Project {
+  margin: 15px 0;
+}
+
+.Head {
+  display: flex;
+  align-content: center;
+}
+
+.Skills {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Title {
+  color: #eb147f;
+}
+
+.Link {
+  margin-top: 10px;
+  color: rgba(83, 83, 83, 0.8);
+}
+
+.Link:hover {
+  color: #eb147f;
+}

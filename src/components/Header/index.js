@@ -20,7 +20,7 @@ export default props => (
       <Grid>
         <div className={classNames.Items}>
           <HeaderItem title="Home" to="/" />
-          <HeaderItem title="Blog" to="/blog" />
+          <HeaderItem title="Blog" to="/blog/" />
         </div>
         <div className={classNames.Icons}>
           <Icon

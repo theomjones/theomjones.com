@@ -3,9 +3,24 @@ import PropTypes from 'prop-types'
 
 import classNames from './Title.module.css'
 
-const Title = ({ title, h1, h2, h3, h4, h5, h6, flat, weight, size }) => {
+const Title = ({
+  title,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  flat,
+  weight,
+  size,
+  primary,
+  secondary,
+}) => {
+  const classes = `${classNames.Title} ${primary &&
+    classNames.primary} ${secondary && classNames.secondary}`
   return (
-    <div className={classNames.Title} style={{ margin: flat && 'none' }}>
+    <div className={classes} style={{ margin: flat && 'none' }}>
       {h1 && (
         <h1
           className={classNames.h1}
@@ -79,6 +94,8 @@ const Title = ({ title, h1, h2, h3, h4, h5, h6, flat, weight, size }) => {
 Title.propTypes = {
   title: PropTypes.string.isRequired,
   flat: PropTypes.bool,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool,
   weight: PropTypes.number,
   size: PropTypes.string,
   h1: PropTypes.bool,

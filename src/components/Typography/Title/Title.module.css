@@ -3,6 +3,14 @@
   margin: 10px 0;
 }
 
+.primary {
+  color: #eb147f;
+}
+
+.secondary {
+  color: rgb(32, 4, 133);
+}
+
 .h1,
 .h2,
 .h3,

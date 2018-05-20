@@ -58,7 +58,7 @@ class EmailForm extends React.Component {
             border={this.props.textInputBorder || 'rgba(255, 255, 255, .8)'}
             onChange={this.onInputChange}
           />
-          <Button title="Go" secondary />
+          <Button title="Go" secondary onClick={this.onSubmit} />
         </form>
       </div>
     )

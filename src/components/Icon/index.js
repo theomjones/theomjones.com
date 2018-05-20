@@ -3,7 +3,16 @@ import PropTypes from 'prop-types'
 
 import classNames from './Icon.module.css'
 
-const Icon = ({ src, alt, round, shadow, to }) => (
+/**
+ *
+ * @param {props} Object
+ * @prop {src} String
+ * @prop {alt} String
+ * @prop {round} Bool
+ * @prop {shadow} Bool
+ * @prop {to} String
+ */
+const Icon = ({ src, alt, round, shadow, to, size }) => (
   <div
     className={classNames.Icon}
     title={to ? to : ''}
@@ -12,6 +21,10 @@ const Icon = ({ src, alt, round, shadow, to }) => (
         window.open(to, '_blank')
       }
       return
+    }}
+    style={{
+      height: size ? size + 'px' : null,
+      width: size ? size + 'px' : null,
     }}
   >
     <img
@@ -27,11 +40,14 @@ const Icon = ({ src, alt, round, shadow, to }) => (
 )
 
 Icon.propTypes = {
+  /** Src is string */
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   round: PropTypes.bool,
   shadow: PropTypes.bool,
   to: PropTypes.string,
+  height: PropTypes.number,
+  width: PropTypes.number,
 }
 
 export default Icon

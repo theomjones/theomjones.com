@@ -12,28 +12,38 @@ export default class Section extends Component {
     this.state = {
       collapsed: props.collapsed,
     }
+    this.handleCollapse = this.handleCollapse.bind(this)
   }
+
+  handleCollapse() {
+    if (this.props.canCollapse) {
+      this.setState(ps => ({ collapsed: !ps.collapsed }))
+    }
+  }
+
   render() {
+    const headerClasses = `${classNames.Header} ${
+      this.props.canCollapse ? classNames.canCollapse : ''
+    }`
     return (
       <div className={classNames.Section}>
-        <div
-          className={classNames.Header}
-          onClick={() => this.setState(ps => ({ collapsed: !ps.collapsed }))}
-        >
+        <div className={headerClasses} onClick={this.handleCollapse}>
           <Title
             title={this.props.title}
             h3
             size={this.props.size}
             weight={600}
           />
-          <span
-            className={classNames.Arrow}
-            style={{
-              transform: this.state.collapsed ? 'rotate(0)' : 'rotate(90deg)',
-            }}
-          >
-            &#9656;
-          </span>
+          {this.props.canCollapse && (
+            <span
+              className={classNames.Arrow}
+              style={{
+                transform: this.state.collapsed ? 'rotate(0)' : 'rotate(90deg)',
+              }}
+            >
+              &#9656;
+            </span>
+          )}
         </div>
 
         {!this.state.collapsed && (
@@ -47,6 +57,7 @@ export default class Section extends Component {
 Section.defaultProps = {
   collapsed: false,
   size: '50%',
+  canCollapse: true,
 }
 
 Section.propTypes = {

@@ -5,7 +5,15 @@ import classNames from './hero.module.css'
 import Container from '../Layout/Components/Container/'
 import EmailForm from '../Forms/EmailForm'
 
-const Hero = ({ withForm = false, subtitle, title, hasHeader, image }) => (
+const Hero = ({
+  withForm = false,
+  subtitle,
+  title,
+  hasHeader,
+  image,
+  tags,
+  children,
+}) => (
   <div
     className={classNames.Hero}
     style={{
@@ -19,8 +27,9 @@ const Hero = ({ withForm = false, subtitle, title, hasHeader, image }) => (
   >
     <Container>
       <div>
-        <h1 className={classNames.Title}>{title}</h1>
+        {title && <h1 className={classNames.Title}>{title}</h1>}
         {subtitle && <h2 className={classNames.Subtitle}>{subtitle}</h2>}
+        {children && children}
         {/* Put email form on it. */}
         {withForm && <EmailForm />}
       </div>
@@ -29,10 +38,11 @@ const Hero = ({ withForm = false, subtitle, title, hasHeader, image }) => (
 )
 
 Hero.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   subititle: PropTypes.string,
   withForm: PropTypes.bool,
   hasHeader: PropTypes.bool,
+  tags: PropTypes.array,
 }
 
 export default Hero

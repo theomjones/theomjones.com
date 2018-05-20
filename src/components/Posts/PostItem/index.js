@@ -12,9 +12,10 @@ import Card from '../../Card/'
 const PostItem = ({ post }) => {
   const { frontmatter } = post
   const { fields } = post
+  console.log(frontmatter)
   return (
     <div className={classNames.PostItem}>
-      <Link to={post.fields.slug}>
+      <Link to={'/' + post.fields.slug}>
         <Card padding={0}>
           <div
             className={classNames.Feature}
@@ -26,6 +27,7 @@ const PostItem = ({ post }) => {
           />
           <div className={classNames.Content}>
             <h3 className={classNames.Title}>{frontmatter.title}</h3>
+            <span className={classNames.Date}>{frontmatter.date}</span>
           </div>
         </Card>
       </Link>

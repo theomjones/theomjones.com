@@ -1,3 +1,16 @@
 .Col {
   width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.Col:first-child {
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 850px) {
+  .Col:first-child {
+    margin: 0;
+  }
 }

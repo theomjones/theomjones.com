@@ -2,6 +2,7 @@
 title: Rounded Corners & Contour Bias
 date: "2017-08-04"
 type: post
+subtitle: Looking into the history of rounded corners in UI design.
 feature: "https://cdn.tipe.io/5aeb9b4a73460c00137fea14/bc4d236a-33a1-44ae-9f3c-95d343f6fcd7/steve-jobs-original-iphone-apple-sign.jpg"
 ---
 

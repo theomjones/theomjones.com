@@ -1,4 +1,5 @@
 .TextInput {
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: none;
@@ -7,8 +8,9 @@
   appearance: none;
   border: none;
   font-weight: 200;
+  padding: 4px 0;
   position: relative;
-  border-bottom: solid 1px #750eb1;
+  border-bottom: solid 2px #750eb1;
 }
 
 .InputWrap {
@@ -20,7 +22,7 @@
 .InputWrap:after {
   position: absolute;
   left: 0;
-  height: 1px;
+  height: 2px;
   background: #eb147f;
   width: 100%;
   bottom: 0;

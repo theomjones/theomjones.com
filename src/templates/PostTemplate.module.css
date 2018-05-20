@@ -2,11 +2,11 @@
   padding: 2rem 0;
 }
 
-.PostTemplate p:first-child {
+.PostTemplate p:first-child:not(blockquote) {
   margin-top: 50px;
 }
 
-.PostTemplate p:first-child::first-letter {
+.PostTemplate p:first-child::first-letter:not(blockquote) {
   font-size: 3rem;
   font-weight: bold;
 }
@@ -30,6 +30,6 @@ blockquote {
   padding: 2rem;
 }
 
-.PostTemplate blockquote p::first-letter {
-  font-size: 10px;
+blockquote p {
+  margin: 0 !important;
 }

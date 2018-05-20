@@ -3,6 +3,7 @@ title: Dynamic Media Queries in Liquid
 date: "2017-08-27"
 type: post
 feature: "https://cdn.tipe.io/5aeb9b4a73460c00137fea14/fa9ca76d-4ae1-4ec1-bc5b-92720ff46208/liquid-snippet.png"
+subtitle: Dynamic CSS with Liquid templating
 ---
 
 For [Fundamental](https://github.com/theomjones/fundamental), the theme I'm actively maintaining, I needed a way to dynamically change a break point based on how many menu items were in the top navigation.
