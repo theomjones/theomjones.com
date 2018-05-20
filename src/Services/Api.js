@@ -1,6 +1,6 @@
 import parseGithubData from '../Utils/ParseGithub'
 
-let mailUrl = 'http://localhost:9000/email' // 'https://theomjones.netlify.com/.netlify/functions/email'
+let mailUrl = 'https://theomjones.netlify.com/.netlify/functions/email'
 
 export default {
   sendEmail(email) {
