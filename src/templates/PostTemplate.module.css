@@ -1,7 +1,3 @@
-.PostTemplate {
-  padding: 2rem 0;
-}
-
 .Info {
   position: absolute;
   display: flex;
@@ -10,10 +6,8 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 390px) {
-  .Info {
-    position: relative;
-  }
+.PostTemplate p {
+  font-size: 105%;
 }
 
 .PostTemplate p:first-child:not(blockquote) {
@@ -46,4 +40,13 @@ blockquote {
 
 blockquote p {
   margin: 0 !important;
+}
+
+@media screen and (max-width: 390px) {
+  .Info {
+    position: relative;
+  }
+  .PostTemplate p:first-child:not(blockquote) {
+    margin-top: 20px;
+  }
 }
