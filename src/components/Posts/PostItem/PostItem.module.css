@@ -1,10 +1,9 @@
 .PostItem {
   margin: 8px 0;
   border-radius: 5px;
-}
-
-.PostItem:hover {
-  opacity: 0.9;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .Feature {

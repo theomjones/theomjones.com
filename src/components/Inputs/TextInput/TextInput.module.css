@@ -18,19 +18,18 @@
   margin: 5px 0;
   position: relative;
   display: inline-block;
-}
-
-.InputWrap:after {
-  position: absolute;
-  left: 0;
-  height: 2px;
-  background: #eb147f;
-  width: 100%;
-  bottom: 0;
-  content: '';
-  transform: scale(0);
-  z-index: 20;
-  transition: transform 0.2s ease-out;
+  &:after {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background: #eb147f;
+    width: 100%;
+    bottom: 0;
+    content: '';
+    transform: scale(0);
+    z-index: 20;
+    transition: transform 0.2s ease-out;
+  }
 }
 
 .isFocused:after {
