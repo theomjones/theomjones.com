@@ -8,7 +8,6 @@ import Button from '../../Button'
 
 export default class extends React.Component {
   constructor(props) {
-    console.log('PROPS', props)
     super(props)
     this.state = {
       searchString: '',

@@ -20,7 +20,7 @@ const Text = ({ children, light, heavy, italic, center }) => {
 }
 
 Text.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any.isRequired,
   light: PropTypes.bool,
   heavy: PropTypes.bool,
   italic: PropTypes.bool,

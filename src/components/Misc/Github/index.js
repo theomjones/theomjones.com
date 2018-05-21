@@ -22,7 +22,6 @@ const Github = class extends React.Component {
   componentDidMount() {
     Api.getGithubActivity()
       .then(res => {
-        console.log(res)
         this.setState(() => ({ items: res, loading: false }))
       })
       .catch(error => alert(error))

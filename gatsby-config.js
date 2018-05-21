@@ -4,6 +4,7 @@ module.exports = {
     author: 'Theo Messenger-Jones',
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
@@ -70,6 +71,15 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: ['gatsby-remark-copy-linked-files'],
+      },
+    },
+    // Google analytics
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-114761965-2',
+        // Puts tracking script in the head instead of the body
+        head: false,
       },
     },
   ],

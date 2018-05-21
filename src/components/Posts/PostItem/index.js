@@ -12,7 +12,6 @@ import Card from '../../Card/'
 const PostItem = ({ post }) => {
   const { frontmatter } = post
   const { fields } = post
-  console.log(frontmatter)
   return (
     <div className={classNames.PostItem}>
       <Link to={'/' + post.fields.slug}>
