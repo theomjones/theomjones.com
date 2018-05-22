@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://theomjon.es/* https://theomjones.com/:splat 301!
+https://www.theomjones.com/* https://theomjones.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://theomjones.netlify.com/* https://theomjones.com/:splat 301!
