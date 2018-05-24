@@ -6,3 +6,8 @@ yarn-error.log
 # Build directory
 /public
 .DS_Store
+
+what-the-redux-pt-1.md
+graphql-and-express.md
+animations.md
+./playground.js
