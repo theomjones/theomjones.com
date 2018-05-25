@@ -6,15 +6,15 @@ import Container from '../components/Layout/Components/Container/index'
 
 import '../prism-themes/theme.css'
 
-const Post = ({ children }) => (
+const Project = ({ children }) => (
   <div>
     <Header />
     {children()}
   </div>
 )
 
-Post.propTypes = {
+Project.propTypes = {
   children: PropTypes.any.isRequired,
 }
 
-export default Post
+export default Project

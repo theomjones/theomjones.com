@@ -38,7 +38,9 @@ const Github = class extends React.Component {
           />
         </div>
         {this.state.loading ? (
-          <Text>Loading...</Text>
+          <div className={classNames.Loading}>
+            <Text center>Fetching activity...</Text>
+          </div>
         ) : (
           <div className={classNames.Items}>
             {this.state.items.map(i => (

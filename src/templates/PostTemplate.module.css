@@ -50,3 +50,20 @@ blockquote p {
     margin-top: 20px;
   }
 }
+
+.PostTemplate p a {
+  text-decoration: underline;
+  text-decoration-color: rgb(235, 20, 127);
+}
+
+.AppLinks {
+  & > div {
+    margin: 0 8px;
+  }
+  opacity: 0.9;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  border-radius: 3px;
+}

@@ -1,6 +1,7 @@
 .Github {
   background: #222;
   z-index: 5;
+  height: 460px;
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
   box-sizing: border-box;
@@ -22,9 +23,24 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .Github {
+    height: 420px;
+  }
+}
+
 .Head {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   padding: 10px;
+}
+
+.Loading {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }

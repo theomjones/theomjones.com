@@ -62,15 +62,27 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `).then(res => {
+      res.data.images.edges.forEach(img => console.log(img))
       res.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          layout: 'post',
-          path: node.fields.slug,
-          component: path.resolve('./src/templates/post.js'),
-          context: {
-            slug: node.fields.slug,
-          },
-        })
+        if (node.fields.slug.match(/post/g)) {
+          createPage({
+            layout: 'post',
+            path: node.fields.slug,
+            component: path.resolve('./src/templates/post.js'),
+            context: {
+              slug: node.fields.slug,
+            },
+          })
+        } else if (node.fields.slug.match(/project/g)) {
+          createPage({
+            layout: 'project',
+            path: node.fields.slug,
+            component: path.resolve('./src/templates/project.js'),
+            context: {
+              slug: node.fields.slug,
+            },
+          })
+        }
       })
       resolve()
     })

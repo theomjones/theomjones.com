@@ -30,7 +30,7 @@ const IndexPage = ({ data }) => (
                 title={project.node.frontmatter.title}
                 skills={project.node.frontmatter.skills}
                 description={project.node.frontmatter.description}
-                url={project.node.frontmatter.url}
+                url={project.node.fields.slug}
               />
             ))}
           </Section>

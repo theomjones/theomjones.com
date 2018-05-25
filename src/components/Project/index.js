@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import classNames from './Project.module.css'
+import Link from 'gatsby-link'
 import Tag from '../Tag/'
 import { Text, Title } from '../Typography/'
 
@@ -17,7 +18,7 @@ const Project = ({ title, description, skills, url }) => (
       <Text>{description}</Text>
     </div>
     <div title={url} className={classNames.Link}>
-      <a href={url}>&#8627;</a>
+      <Link to={url}>&#8627;</Link>
     </div>
   </div>
 )
