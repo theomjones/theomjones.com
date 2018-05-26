@@ -32,6 +32,7 @@ class TextInput extends React.Component {
             color: this.props.color,
             borderColor: this.props.border,
           }}
+          value={this.props.value}
           name={this.props.name}
           onChange={this.props.onChange}
           className={classNames.TextInput}

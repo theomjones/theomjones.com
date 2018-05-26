@@ -10,3 +10,7 @@ yarn-error.log
 graphql-and-express.md
 animations.md
 ./playground.js
+
+# env
+.env.development
+.env.production

@@ -26,8 +26,10 @@ class EmailForm extends React.Component {
 
   onSubmit(event) {
     event.preventDefault()
+    const email = this.state.inputValue
+    // console.log('input value', email)
     this.setState(() => ({ loading: true }))
-    API.sendEmail(this.state.inputValue)
+    API.sendEmail(email)
       .then(res => {
         this.setState(() => ({ loading: false, inputValue: '', hasSent: true }))
       })
@@ -57,6 +59,7 @@ class EmailForm extends React.Component {
             color={this.props.textInputColor || '#fff'}
             border={this.props.textInputBorder || 'rgba(255, 255, 255, .8)'}
             onChange={this.onInputChange}
+            value={this.state.inputValue}
           />
           <Button title="Go" secondary onClick={this.onSubmit} />
           {this.state.loading && <Text>Please wait...</Text>}

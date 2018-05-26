@@ -11,11 +11,13 @@ export default {
           headers: {
             'content-type': 'application/json',
           },
-          mode: 'cors',
+          // mode: 'cors',
           body: JSON.stringify({ email }),
         })
-        .then(res => res.text())
-        .then(s => resolve(s))
+        .then(res => res.json())
+        .then(json => {
+          resolve(json)
+        })
         .catch(e => reject(e))
     })
   },
