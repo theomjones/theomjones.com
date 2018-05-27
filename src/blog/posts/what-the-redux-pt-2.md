@@ -1,6 +1,5 @@
 ---
 title: "What the Redux? (Part 2: The how)"
-type: post
 date: "2018-05-27T09:12:00.771Z"
 subtitle: Understanding Redux – properly.
 feature: https://cdn-images-1.medium.com/max/800/1*WcRnU2ERqYHZBKBQ0zXCvg.png
