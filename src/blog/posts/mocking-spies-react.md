@@ -6,7 +6,7 @@ subtitle: Mocking spies in React Components
 feature: https://image.freepik.com/free-icon/spy_318-64610.jpg
 ---
 
-Firstly, it might be a good idea to refactor your component to be a class based component, pulling out your inline components. This makes testing a lot easier, as we can easily pass in mock functions (spies) as props.
+Firstly, it might be a good idea to refactor your component to be a class based component, pulling out your inline functions. This makes testing a lot easier, as we can easily pass in mock functions (spies) as props.
 
 e.g. Imagine we have an `EditExpense` components which lets you click a button which lets you edit an expense based on it's id. It is passed in the expense as a prop, so we have access to the id.
 

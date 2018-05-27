@@ -35,7 +35,7 @@ export default class extends React.Component {
           <div className={classNames.SearchBar}>
             <TextInput
               autoFocus
-              placeholder="Search..."
+              placeholder="Search... e.g `react`, `jest`"
               onChange={this.handleSearch}
             />
             <div className={classNames.Filters}>
