@@ -7,5 +7,25 @@
 }
 
 .Form button {
-  margin-left: 10px;
+  margin: 0 10px;
+}
+
+.FormInfo,
+.FormResult {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes Flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.FormResult {
+  animation: Flash 0.6s ease-in-out infinite alternate-reverse;
 }

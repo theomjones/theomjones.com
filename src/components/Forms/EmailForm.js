@@ -61,9 +61,13 @@ class EmailForm extends React.Component {
             onChange={this.onInputChange}
             value={this.state.inputValue}
           />
-          <Button title="Go" secondary onClick={this.onSubmit} />
-          {this.state.loading && <Text>Please wait...</Text>}
-          {this.state.hasSent && <Text>Thanks! I'll be in touch.</Text>}
+          <div className={classNames.FormInfo}>
+            <Button title="Go" secondary onClick={this.onSubmit} />
+            <div className={classNames.FormResult}>
+              {this.state.loading && <Text>Please wait...</Text>}
+              {this.state.hasSent && <Text>Thanks! I'll be in touch.</Text>}
+            </div>
+          </div>
         </form>
       </div>
     )
