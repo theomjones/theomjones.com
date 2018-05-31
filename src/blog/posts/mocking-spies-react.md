@@ -1,12 +1,11 @@
 ---
 title: Jest Spies & React
 date: "2018-05-27T12:18:24.737Z"
+updated: "2018-05-31T07:47:17.921Z"
 type: post
 subtitle: Mocking spies in React Components
 feature: https://image.freepik.com/free-icon/spy_318-64610.jpg
 ---
-
-Firstly, it might be a good idea to refactor your component to be a class based component, pulling out your inline functions. This makes testing a lot easier, as we can easily pass in mock functions (spies) as props.
 
 e.g. Imagine we have an `EditExpense` components which lets you click a button which lets you edit an expense based on it's id. It is passed in the expense as a prop, so we have access to the id.
 
