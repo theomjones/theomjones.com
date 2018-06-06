@@ -22,11 +22,15 @@ class EmailForm extends React.Component {
 
     this.onInputChange = this.onInputChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+    this.onInputFocus = this.onInputFocus.bind(this)
   }
 
   onSubmit(event) {
     event.preventDefault()
     const email = this.state.inputValue
+    if (!email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+      return this.setState({ error: 'Please provide a valid email.' })
+    }
     // console.log('input value', email)
     this.setState(() => ({ loading: true }))
     API.sendEmail(email)
@@ -43,13 +47,16 @@ class EmailForm extends React.Component {
     this.setState(() => ({ inputValue: value }))
   }
 
+  onInputFocus(e) {
+    this.setState({ error: null })
+  }
+
   render() {
     return (
       <div>
         <div className={classNames.Message}>
           <Text>
-            I'm currently looking for work. Leave your email below to get in
-            touch.
+            Have a project in mind? Leave your email below, I'll get in touch.
           </Text>
         </div>
         <form className={classNames.Form} onSubmit={this.onSubmit}>
@@ -59,6 +66,7 @@ class EmailForm extends React.Component {
             color={this.props.textInputColor || '#fff'}
             border={this.props.textInputBorder || 'rgba(255, 255, 255, .8)'}
             onChange={this.onInputChange}
+            onClick={this.onInputFocus}
             value={this.state.inputValue}
           />
           <div className={classNames.FormInfo}>
@@ -66,6 +74,7 @@ class EmailForm extends React.Component {
             <div className={classNames.FormResult}>
               {this.state.loading && <Text>Please wait...</Text>}
               {this.state.hasSent && <Text>Thanks! I'll be in touch.</Text>}
+              {this.state.error && <Text>{this.state.error}</Text>}
             </div>
           </div>
         </form>

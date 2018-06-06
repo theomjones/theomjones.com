@@ -37,6 +37,7 @@ class TextInput extends React.Component {
           onChange={this.props.onChange}
           className={classNames.TextInput}
           onFocus={this.onFocus}
+          onClick={this.props.onClick}
           onBlur={this.onBlur}
           autoFocus={this.props.autoFocus}
           placeholder={this.props.placeholder}
