@@ -56,7 +56,7 @@ class EmailForm extends React.Component {
       <div>
         <div className={classNames.Message}>
           <Text>
-            Have a project in mind? Leave your email below, I'll get in touch.
+            I'm free for freelance work until July 2nd. Leave your email below and I'll get in touch.
           </Text>
         </div>
         <form className={classNames.Form} onSubmit={this.onSubmit}>
