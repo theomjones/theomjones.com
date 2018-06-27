@@ -24,15 +24,27 @@ const IndexPage = ({ data }) => (
       <Grid>
         <Col>
           <Section title="Projects" canCollapse={false}>
-            {data.projects.edges.map(project => (
-              <Project
-                key={project.node.frontmatter.url}
-                title={project.node.frontmatter.title}
-                skills={project.node.frontmatter.skills}
-                description={project.node.frontmatter.description}
-                url={project.node.fields.slug}
-              />
-            ))}
+            {data.projects.edges
+              .filter(p => p.node.frontmatter.date > 2017)
+              .map(project => (
+                <Project
+                  key={project.node.frontmatter.url}
+                  title={project.node.frontmatter.title}
+                  skills={project.node.frontmatter.skills}
+                  description={project.node.frontmatter.description}
+                  url={project.node.fields.slug}
+                  date={project.node.frontmatter.date}
+                />
+              ))}
+            <Link
+              style={{
+                fontSize: '80%',
+                textDecoration: 'underline',
+              }}
+              to="/projects"
+            >
+              View More
+            </Link>
           </Section>
         </Col>
         <Col>
@@ -79,7 +91,7 @@ export const query = graphql`
             words
           }
           frontmatter {
-            date(fromNow: true)
+            date
             title
             feature
           }
@@ -100,6 +112,7 @@ export const query = graphql`
             description
             skills
             url
+            date(formatString: "YYYY")
           }
         }
       }

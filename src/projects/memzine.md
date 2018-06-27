@@ -4,7 +4,8 @@ title: Memzine
 description: Gamefied journal entries – Web, PWA.
 skills: ['NodeJS', 'Vue', 'MongoDB']
 url: '#'
-order: 4
+order: 3
+date: "2018-02-27T09:59:33.534Z"
 ---
 
 Memzine is a project I'm developing in my spare time. It's a full ground up NodeJS/MongoDB build currently with VueJS (although I will be rewriting with React).

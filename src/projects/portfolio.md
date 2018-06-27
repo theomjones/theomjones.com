@@ -4,7 +4,8 @@ type: project
 description: Portfolio built with React & GatsbyJS, alongside some AWS Lambda functions.
 url: https://theomjones.com
 skills: ['React', 'NodeJS']
-order: 1
+order: 2
+date: "2018-04-27T10:59:33.534Z"
 ---
 
 Recently I rebuilt my portfolio with React and static site generator GatsbyJS.

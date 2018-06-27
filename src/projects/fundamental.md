@@ -9,6 +9,7 @@ appLinks:
 description: A url shortener with accompanying web-app, iOS App (on Expo) and CLI.
 url: https://github.com/theomjones/fundamental
 order: 10
+date: "2017-07-27T09:59:33.534Z"
 ---
 
 In 2017 I built a performance focused Jekyll blog theme and open sourced it. It has a few active users.

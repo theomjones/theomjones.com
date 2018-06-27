@@ -1,5 +1,6 @@
 .Project {
   margin: 15px 0;
+  position: relative;
 }
 
 .Head {
@@ -23,4 +24,14 @@
   &:hover {
     color: #eb147f;
   }
+}
+
+.date {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 80%;
+  color: #00000039;
+  margin-left: auto;
+  position: relative;
+  font-style: italic;
 }

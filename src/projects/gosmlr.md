@@ -13,7 +13,8 @@ appLinks:
     icon: github.svg
 description: A url shortener with accompanying web-app, iOS App (on Expo) and CLI.
 url: https://gosmlr.xyz
-order: 3
+order: 4
+date: "2017-11-27T09:59:33.534Z"
 ---
 
 ![App Mockup](https://theomjonesimg.s3.amazonaws.com/blog/gosmlr-ios.jpg)
