@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
   <div>
     <Hero
       title="I'm Theo"
-      subtitle="A full-stack JavaScript developer based in London."
+      subtitle="A UI Engineer at VoucherCodes."
       withForm={true}
       hasHeader={true}
     />
