@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Hero from '../components/Hero/'
 import { Container } from '../components/Layout/'
 import { Text } from '../components/Typography'
+import Momentum from 'react-momentum'
 
 import classNames from './PostTemplate.module.css'
 import Pill from '../components/Pill/index'
@@ -40,10 +41,12 @@ export default ({ data }) => {
         </div>
       </Hero>
       <Container>
-        <div
-          className={classNames.PostTemplate}
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+        <Momentum height={3} color="#eb147f">
+          <div
+            className={classNames.PostTemplate}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </Momentum>
       </Container>
       <Hero withForm />
     </div>
