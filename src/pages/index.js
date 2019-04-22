@@ -91,7 +91,7 @@ export const query = graphql`
             words
           }
           frontmatter {
-            date
+            date(formatString: "MMM DD YYYY")
             title
             feature
           }
