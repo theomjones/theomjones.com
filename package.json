@@ -26,7 +26,8 @@
     "prop-types": "^15.6.1",
     "react-flexbox-grid": "^2.1.0",
     "react-helmet": "^5.2.0",
-    "react-momentum": "^0.1.5"
+    "react-momentum": "^0.1.5",
+    "timeago-react": "^2.0.1"
   },
   "keywords": [
     "gatsby"

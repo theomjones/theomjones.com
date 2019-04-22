@@ -28,16 +28,20 @@ import AEIcon from '../../../img/icons/ae.svg'
 export default {
   code: [
     {
-      title: 'JavaScript',
-      img: JSIcon,
-    },
-    {
       title: 'TypeScript',
       img: TSIcon,
     },
     {
+      title: 'JavaScript',
+      img: JSIcon,
+    },
+    {
       title: 'NodeJS',
       img: NodeIcon,
+    },
+    {
+      title: 'Go',
+      img: GoIcon,
     },
     {
       title: 'HTML',
@@ -54,10 +58,6 @@ export default {
     {
       title: 'Stylus',
       img: StylusIcon,
-    },
-    {
-      title: 'Go (WIP)',
-      img: GoIcon,
     },
     {
       title: 'Pug',

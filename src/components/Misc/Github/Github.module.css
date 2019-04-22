@@ -1,11 +1,9 @@
 .Github {
   background: #222;
   z-index: 5;
-  height: 460px;
   border-radius: 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.26);
   box-sizing: border-box;
-  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 1300px) {

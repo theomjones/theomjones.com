@@ -16,13 +16,34 @@ const IndexPage = ({ data }) => (
   <div>
     <Hero
       title="I'm Theo"
-      subtitle="A UI Engineer at VoucherCodes."
+      subtitle="A full stack JavaScript developer, based in London."
       withForm={true}
       hasHeader={true}
     />
     <Container padding>
       <Grid>
         <Col>
+          <Section title="Bio" canCollapse={false}>
+            <p>
+              I've been building for the web professionally for over two years.
+              My main love is JavaScript &amp; TypeScript but I've been working
+              a lot with Go lateley. I like building practical, user-focused
+              products and I like to think I have an eye for design.
+            </p>
+            <p>
+              I'm currently writing TypeScript with both React &amp; Vue, full
+              time at{' '}
+              <a
+                style={{
+                  color: 'rgb(235, 20, 127)',
+                }}
+                href="https://www.vouchercodes.co.uk/"
+              >
+                VoucherCodes
+              </a>
+              .
+            </p>
+          </Section>
           <Section title="Projects" canCollapse={false}>
             {data.projects.edges
               .filter(p => p.node.frontmatter.date > 2017)
