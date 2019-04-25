@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Project from '../components/Project'
 import Hero from '../components/Hero'
 import Container from '../components/Layout/Components/Container'

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-
+import { graphql } from 'gatsby'
 import Hero from '../components/Hero/'
 import PostLoop from '../components/Posts/PostLoop'
 import { Grid, Container, Col } from '../components/Layout/'
@@ -11,9 +11,10 @@ import Section from '../components/Section'
 import Project from '../components/Project'
 import Github from '../components/Misc/Github'
 import Skills from '../components/Misc/Skills'
+import Layout from '../layouts'
 
 const IndexPage = ({ data }) => (
-  <div>
+  <Layout title={data.site.siteMetadata.title}>
     <Hero
       title="I'm Theo"
       subtitle="A full stack JavaScript developer, based in London."
@@ -90,13 +91,18 @@ const IndexPage = ({ data }) => (
         </Col>
       </Grid>
     </Container>
-  </div>
+  </Layout>
 )
 
 export default IndexPage
 
 export const query = graphql`
   query GetIndexData {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     posts: allMarkdownRemark(
       filter: { frontmatter: { type: { eq: "post" } } }
       sort: { fields: [frontmatter___date], order: DESC }

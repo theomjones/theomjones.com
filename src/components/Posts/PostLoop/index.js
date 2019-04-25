@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from 'gatsby-link'
-
 import PostItem from '../PostItem/'
 import classNames from './PostLoop.module.css'
 import TextInput from '../../Inputs/TextInput'
@@ -27,8 +25,6 @@ export default class extends React.Component {
   }
 
   render() {
-    const { data } = this.props
-
     return (
       <div className={classNames.PostLoop}>
         {this.props.search && (

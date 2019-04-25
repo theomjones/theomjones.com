@@ -1,11 +1,8 @@
 import React from 'react'
-
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Hero from '../components/Hero/'
 import { Container } from '../components/Layout/'
-import { Text } from '../components/Typography'
-
-import IOSIcon from '../img/icons/ios.svg'
 
 import Pill from '../components/Pill'
 
@@ -39,7 +36,9 @@ export default ({ data }) => {
         hasHeader
       >
         <div className={classNames.Info}>
-          {project.frontmatter.skills.map(skill => <Pill title={skill} />)}
+          {project.frontmatter.skills.map(skill => (
+            <Pill title={skill} />
+          ))}
         </div>
         <div className={classNames.AppLinks}>
           {project.frontmatter.appLinks &&

@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
-
+import { graphql } from 'gatsby'
 import { Container } from '../components/Layout'
 import PostLoop from '../components/Posts/PostLoop'
 import Hero from '../components/Hero'

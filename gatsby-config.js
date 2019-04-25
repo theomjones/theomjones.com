@@ -5,18 +5,20 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-netlify',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: ['gatsby-remark-copy-linked-files'],
-      },
-    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'theomjones',
+              includeDefaultCss: true,
+            },
+          },
           {
             resolve: 'gatsby-remark-prismjs',
             options: {
@@ -70,7 +72,25 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: ['gatsby-remark-copy-linked-files'],
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-embed-gist',
+            options: {
+              username: 'theomjones',
+              includeDefaultCss: true,
+            },
+          },
+          'gatsby-remark-copy-linked-files',
+        ],
       },
     },
     // Google analytics

@@ -8,7 +8,7 @@ import Icon from '../../../Icon'
 const Item = ({ name, type, time, url }) => {
   const date = new Date(time)
   return (
-    <a href={url} target="_blank" title={url}>
+    <a href={url} target="_blank" rel="noopener noreferrer" title={url}>
       <div className={classNames.Item}>
         <div className={classNames.Icon}>
           <Icon src={SourceIcon} size={15} alt="source control icon" />

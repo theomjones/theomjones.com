@@ -6,10 +6,10 @@ import Header from '../components/Header/'
 import './index.css'
 import Footer from '../components/Footer'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, title }) => (
   <div>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title={title}
       meta={[
         {
           name: 'description',
@@ -23,7 +23,7 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header />
-    <div>{children()}</div>
+    <div>{children}</div>
     <Footer />
   </div>
 )
@@ -33,13 +33,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

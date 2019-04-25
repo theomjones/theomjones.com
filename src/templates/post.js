@@ -1,9 +1,8 @@
 import React from 'react'
-
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import Hero from '../components/Hero/'
 import { Container } from '../components/Layout/'
-import { Text } from '../components/Typography'
 import Momentum from 'react-momentum'
 
 import classNames from './PostTemplate.module.css'
