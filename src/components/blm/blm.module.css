@@ -1,0 +1,28 @@
+.root {
+  background: hsl(0, 0%, 4%);
+  box-sizing: border-box;
+  color: hsl(0, 0%, 98%);
+  display: block;
+  line-height: 1.7;
+  padding: 32px;
+  width: 100%;
+}
+
+.names {
+  margin-bottom: 16px;
+}
+
+.para {
+  margin: 0;
+}
+
+.link {
+  text-decoration: underline;
+  color: hsl(0, 0%, 86%);
+}
+
+.link:focus,
+.link:hover {
+  color: hsl(0, 0%, 98%);
+  text-decoration: underline;
+}
