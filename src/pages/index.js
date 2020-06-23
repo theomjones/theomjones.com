@@ -31,15 +31,15 @@ const IndexPage = ({ data }) => (
               products and I like to think I have an eye for design.
             </p>
             <p>
-              I'm currently writing TypeScript with both React &amp; Vue, full
+              I'm currently writing TypeScript and Go, full
               time at{' '}
               <a
                 style={{
                   color: 'rgb(235, 20, 127)',
                 }}
-                href="https://www.vouchercodes.co.uk/"
+                href="https://www.kittoffices.com/"
               >
-                VoucherCodes
+                Kitt
               </a>
               .
             </p>
