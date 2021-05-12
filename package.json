@@ -21,7 +21,7 @@
     "gatsby-transformer-json": "^1.0.18",
     "gatsby-transformer-remark": "^1.7.41",
     "netlify-lambda": "^0.4.0",
-    "nodemailer": "^4.6.4",
+    "nodemailer": "^6.4.16",
     "prismjs": "^1.14.0",
     "prop-types": "^15.6.1",
     "react-flexbox-grid": "^2.1.0",
